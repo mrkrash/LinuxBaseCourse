@@ -1,16 +1,8 @@
 ---
-# try also 'default' to start simple
-theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
-# apply any windi css classes to the current slide
+theme: light-icons
 class: 'text-center'
-# https://sli.dev/custom/highlighters.html
 highlighter: shiki
-# show line numbers in code blocks
 lineNumbers: false
-# some information about the slides, markdown enabled
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
@@ -19,90 +11,342 @@ info: |
 # persist drawings in exports and build
 drawings:
   persist: false
+titleTemplate: 'Corso Base Linux'
+layout: image-header-intro
+imageRight: '/static/linux.png'
 ---
 
-# Welcome to Slidev
-
-Presentation slides for developers
-
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
-    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div>
+  <div class="leading-snug text-black dark:text-white text-opacity-60 dark:text-opacity-60 mt-4">
+    <span class="text-9xl text-opacity-60" style="font-weight:600;" >
+      LINUX
+    </span> 
+  </div>
 
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode 
+along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
 
 ---
+layout: image-header-intro
+imageRight: '/static/linux.png'
+---
+  <div class="text-primary dark:text-primary ">
+    <span class="text-3xl" style="font-weight: 600;">
+      Cos'è Linux
+    </span>
+  </div>
 
-# What is Slidev?
+  <div class="flex justify-between pb-2">
+    <span class="text-xs opacity-60">
+      Linux è un sistema operativo <strong>Unix Like</strong>, ideato da Linus Torvlads nel 1991.
+    </span>
+  </div>
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+  <div class="flex justify-between pb-2">
+    <span class="text-xs opacity-60">
+      Linux è una reale alternativa al mondo Microsoft e Unix, presente in milioni di dispositivi e server, utilizzato 
+      da migliaia di sviluppatori in un mercato in continua espansione.
+    </span>
+  </div>
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
+  <div class="flex justify-between pb-2">
+    <span class="text-xs opacity-60">
+      Linux è oggi utilizzato in sistemi integrati, per il controllo di dispositivi robotici e sullo shuttle: 
+      praticamente gira su oggetti elettronici di tutti i tipi, dai server agli smartphone, risultando il sistema
+      operativo in assoluto più utilizzato.
+    </span>
+  </div>
 
-<br>
-<br>
+  <div class="flex justify-between pb-2">
+    <span class="text-xs opacity-60">
+      Con Linux viene gestita la maggior parte di Internet, le più grandi piazze finanziarie del mondo, nonchè i 
+      supercomputer che permettono le scoperte scientifiche.
+    </span>
+  </div>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+---
+layout: dynamic-image
+image: 'static/Linus_Torvalds.jpg'
+equals: false
+---
+
+<div class="text-primary dark:text-primary ">
+  <span class="text-3xl" style="font-weight: 600;">
+    Accenni di Storia
+  </span>
+</div>
+
+<div class="text-secondary dark:text-primary pt-2">
+  <span class="text-lg" style="font-weight: 400;">
+    Linus Torvalds e la nascita di Linux
+  </span>
+</div>
+
+<div class="flex justify-between pb-2">
+  <span class="text-xs opacity-60">
+    Linus Torvalds, studente finlandese di informatica, il 25 agosto del 1991, insoddisfatto del sistema operativo 
+    Minix (sistema unix-like destinato alla didattica e che mal supportava la nuova architettura i386 a 32bit), decide 
+    di creare un kernel unix con lo scopo di divertirsi e studiare il funzionamento del suo computer, un 80386.
+  </span>
+</div>
+
+<div class="flex justify-between pb-2">
+  <span class="text-xs opacity-60">
+    All'inizio, il kernel programmato da Linus, chiamato Linux, aveva la necessità di girare all'interno dello 
+    userspace di Minix. Questo implicava l'adesione alla licenza del Minix stesso, ovvero il libero utilizzo
+    esclusivamente a fini didattici, impedendone la libera distribuzione.
+    Linus decide quindi di sostituire quella parte del sistema operativo con il software del progetto GNU. Per fare ciò,
+    Torvalds, cambiò la licenza e adottò la GPL.
+  </span>
+</div>
+
+<div class="flex justify-between pb-2">
+  <span class="text-xs opacity-60">
+    Sin dalla versione 0.01 si poteva compilare e far partire la shell GNU Bash. Linus rende pubblico il suo lavoro ed
+    il suo codice, trovando presto altri sviluppatori che aderiscono alla visione ed al progetto, rendendo in breve
+    tempo linux un sistema operativo completo, pienamente funzionante e libero. Il 12 marzo del 1994, Linus Torvalds
+    presenta all'Università di Helsinki la prima versione stabile di Linux, la 1.0.
+  </span>
+</div>
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
 Learn more: https://sli.dev/guide/syntax#embedded-styles
 -->
 
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
+---
+layout: image-header-intro
+imageRight: '/static/gnu.png'
+---
+  <div class="text-primary dark:text-primary ">
+    <span class="text-3xl" style="font-weight: 600;">
+      Gnu Public License
+    </span>
+  </div>
+
+  <div class="flex justify-between pb-2 pt-5">
+    <span class="text-xs opacity-60">
+      Linus Torvalds racconta nel suo libro che linux nasce per poter dare un'alternativa libera al predominio dei 
+      software propretari. Adotta quindi una licenza il cui scopo principale è mantenere tale libertà. 
+    </span>
+  </div>
+
+  <div class="flex justify-between pb-2 pt-5">
+    <span class="text-xs opacity-60">
+      La <strong>GPL</strong> sancisce che qualiasi fornitore, al momento di distribuire file binari, deve anche rendere
+      il codice sorgente leggibile e disponibile sotto gli stessi termini di licenza.<br/>
+      Essa garantisce agli utenti finali, come organizzazioni, imprese o semplici individui, di utilizzare, condividere 
+      e persino modificare il software.
+    </span>
+  </div>
+
+  <div class="flex justify-between pb-2 pt-5">
+    <span class="text-xs opacity-60">
+      Oggi arrivata alla terza versione, è progettata per essere applicata facilmente ai programmi di cui detengono i
+      relativi diritti.
+    </span>
+  </div>
 
 ---
+layout: center-image
+equals: false
+---
 
-# Navigation
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Ma cos'è nella pratica
+  </span>
+</div>
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-4">
+      Possiamo definirlo impropriamente un sistema operativo che, come i suoi principali competitor, Windows e Mac OSX,
+      permette al software applicativo di dialogare con l'hardware e gestirne le risorse.<br/>
+      Senza il sistema operativo, il software non potrebbe funzionare.
+  </div>
 
-### Keyboard Shortcuts
+  <div class="pb-2">
+      Il Sistema Operativo è composto da un certo numero di sottosistemi:
+    <ul class="ml-3 pt-2">
+      <li>- il <strong>Bootloader</strong> che è il software che gestisce il processo di avvio del computer</li>
+      <li>
+        - il <strong>Kernel</strong> che è il cuore del sistema e si occupa di gestire le risorse presenti nel
+        computer, rendendole disponibili alle applicazioni
+      </li>
+      <li>
+        - i <strong>Demoni</strong> che sono i vari servizi che ascoltano in backgroud e si attivano all'avvio del
+        computer o in seguito a specifici eventi
+      </li>
+      <li>
+        - la <strong>Shell</strong>, ovvero un software che emula un terminale a caratteri che permette di
+        controllare il computer
+      </li>
+      <li>
+        - il <strong>Server Grafico</strong> a cui è delegata la responsabilità di visualizzare le informazioni sul 
+        monitor
+      </li>
+      <li>
+        - l'<strong>Ambiente Desktop</strong>, ovvero il sottosistema con cui l'utente interagisce con il sistema 
+        operativo
+      </li>
+    </ul>
+  </div>
+</div>
 
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+---
+layout: center-image
+equals: false
+---
 
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Le Distribuzioni
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-4">
+      Una distribuzione è un confezionamento di vari paccehtti software coerenti fra loro atto a rendere comoda e
+      semplice, tramite procedure guidate, l'installazione di linux.
+  </div>
+
+  <div class="pb-2">
+    Tenendo a mente che:
+    <ul class="ml-3 pt-2">
+      <li>- linux è solo un kernel, non un vero e proprio sistema operativo</li>
+      <li>
+        - le applicazioni eseguite all'interno della user-space hanno una propria versione e sono indipendenti da linux
+        stesso
+      </li>
+    </ul>
+  </div>
+  <div>
+    Le distribuzioni aggiungono tutto il software necessario per avere un sistema operativo completo di software
+    applicativi e di servizio, personalizzando le versioni degli stessi e organizzando al meglio la procedura di
+    installazione.
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Quale distribuzione utilizzeremo
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-4">
+      Le distribuzioni oggi disponibili sono diverse decine, tutte valide a modo loro e che si differenziano tra esse
+      per delle pecularietà come l'ambiente di lavoro a cui sono destinate
+  </div>
+
+  <div class="pb-2">
+    In questo corso utilizzeremo <strong>Ubuntu 20.04 LTS</strong>, una delle distribuzioni più semplici da usare che, grazie
+    proprio alla semplicità di utilizzo, risulta essere la più diffusa.
+  </div>
+  <div>
+    Ubuntu nasce il 20 ottobre 2002 con l'obiettivo principale di portare linux alle masse. È una distribuzione
+    fortemente pensata per essere efficiente ma allo stesso tempo semplice da utilizzare.
+  </div>
+  <div>
+    Di proprietà di Canonical, Ubuntu si presta ad essere usata sia su workstation, che su server e infrastrutture 
+    cloud.<br>
+    Proprio da questi ultimi due settori, Canonical trae i propri profitti.
+  </div>
+</div>
+
+---
+layout: image-header-intro
+imageRight: 'static/Installazione01.png'
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Installazione
+  </span>
+</div>
+
+<div class="text-left pb-2 opacity-60 mr-6">
+  <div class="pb-4">
+      L'installazione avverrà tramite una procedura guidata, durante la quale ci verranno poste alcune domande.
+  </div>
+
+  <div class="pb-2">
+    <span class="font-bold text-lg text-yellow-500">Attenzione</span> La procedura di installazione apporterà modifiche
+    alla memoria del computer, riducendo lo spazio disponibile del sistema operativo già presente, se si intende
+    mantenerlo, piuttosto che eliminando tutti i dati presenti in esso se si intende sosituirlo.<br>
+    È quindi necessario prestare la dovuta attenzione prima di procedere e assicurarsi di avere una copia di backup dei
+    propri dati.
+  </div>
+</div>
+
+---
+layout: center-image
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Installazione
+  </span>
+</div>
+
+<div class="flex text-xs">
+  <div class="mr-2" style="width: 14rem;">
+    <img src="static/Installazione02.png" />
+    <div class="opacity-60 mt-4">
+      Decidiamo se procedere con un'installazione minimale o completa e, soprattutto, se scaricare gli aggiornamenti
+      durante l'installazione ed installare driver e software di terze parti.
+    </div>
+  </div>
+  <div class="mr-2" style="width: 14rem;">
+    <img src="static/Installazione03.png" />
+    <div class="opacity-60 mt-4">
+      Decidiamo se cancellare il contenuto del disco o ricavare un po di spazio da quello libero.
+    </div>
+  </div>
+  <div class="mr-2" style="width: 14rem;">
+    <img src="static/Installazione04.png" />
+    <div class="opacity-60 mt-4">
+      Inseriamo il nome utente che desideriamo utilizzare, il nome con cui il computer sarà riconosciuto all'interno 
+      della rete e la password
+    </div>
+  </div>
+</div>
+
+---
+layout: image-header-intro
+imageRight: 'static/Desktop.jpg'
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Primo Avvio
+  </span>
+</div>
+
+<div class="text-left pb-2 opacity-60 mr-6">
+  <div class="pb-4">
+      Terminata l'installazione, se non si sono verificati errori durante quest'ultima, ci troveremo dinanzi una
+      schermata di accesso con evidenziato il nome utente che abbiamo scelto nella fase precedente.<br>
+      Cliccandogli sopra, ci verrà richiesta la password (anch'essa scelta nella fase precedente) e ci troveremo
+      nell'ambiente desktop predefinito di Ubuntu
+  </div>
+
+  <div class="pb-2">
+    <span class="font-bold text-lg text-yellow-500">Attenzione</span> La procedura di installazione apporterà modifiche
+    alla memoria del computer, riducendo lo spazio disponibile del sistema operativo già presente, se si intende
+    mantenerlo, piuttosto che eliminando tutti i dati presenti in esso se si intende sosituirlo.<br>
+    È quindi necessario prestare la dovuta attenzione prima di procedere e assicurarsi di avere una copia di backup dei
+    propri dati.
+  </div>
+</div>
+
+<arrow v-click="1" x1="600" y1="120" x2="510" y2="50" color="rgba(59, 130, 246, 0.5)" width="2" arrowSize="1" />
 
 ---
 layout: image-right
