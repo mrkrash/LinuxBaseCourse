@@ -337,9 +337,259 @@ imageRight: 'static/Desktop.jpg'
     nell'ambiente desktop predefinito di Ubuntu
   </div>
 
-  <div v-click="1" class="pb-2">
-    
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Il File System
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-4">
+    Il file system è un sistema di archiviazione su un supporto di memoria che struttura e organizza in modo specifico 
+    scrittura, ricerca, lettura, memorizzazione, modifica ed eliminazione dei file. La strutturazione dei file deve 
+    garantire una loro identificazione rapida senza errori e un accesso il più veloce possibile da parte degli utenti. 
+    Inoltre, il file system definisce, ad esempio, le seguenti proprietà:
+    <ul>
+      <li>convenzioni sui nomi di file</li>
+      <li>attributi dei file</li>
+      <li>controllo/i di accesso</li>
+    </ul>
+    Inoltre il file system sono un’importante componente operativa che funge da interfaccia tra il sistema operativo e 
+    tutte le unità collegate interne ed esterne, ad esempio tramite una porta USB.
+  </div>
+
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Il File System su Linux
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-4 container">
+    <div class="grid grid-cols-2">
+      <div class="pr-2">
+        <div>
+          L'organizzazione del file system di Linux è gerarchica: tutto inizia da una singola directory, non esiste 
+          distinzione tra hardware e software (le periferiche hardware in Linux vengono rappresentate come dei file 
+          speciali) e qualsiasi parte del sistema è figlia della directory radice.<br/>
+          In parole povere, tutto inizia dalla directory root e tutto termina con essa.
+        </div>
+        <div class="mt-2">
+          La directory <code>/</code> è accessibile digitando <code>cd /</code> da terminale, oppure scrivendo 
+          <code>/</code> nella barra degli
+          indirizzi del file manaager.
+        </div>
+      </div>
+      <div class="pl-20">
+        / (directory root)<br/>
+        |_ /boot<br/>
+        |_ /dev<br/>
+        |_ /etc<br/>
+        |_ /home<br/>
+        |_ /lib<br/>
+        |_ /llib64<br/>
+        |_ /mnt<br/>
+        |_ /opt<br/>
+        |_ /proc<br/>
+        |_ /root<br/>
+        |_ /run<br/>
+        |_ /sys<br/>
+        |_ /tmp<br/>
+        |_ /usr<br/>
+        |_ /var<br/>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Il File System su Linux
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-3">
+    Tramite il comando <strong>stat /</strong>, otteniamo:
+  </div>
+  <div class="pb-3">
+    <code>
+      File: /<br/>
+      Dim.: 4096        Blocchi: 8          Blocco di IO: 4096   directory<br/>
+      Device: fc05h/64517d  Inode: 2           Coll.: 20<br/>
+      Accesso: (0755/drwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)<br/>
+    </code>
+  </div>
+  <div>
+    Le prime due righe indicano che la directory si chiama /, è grande 4096 bytes (come ogni directory) e
+    occupa 8 blocchi.<br/>
+    Nella terza troviamo il device in cui risiede e il numero di ulteriori directory che contiene.<br/>
+    Nell'ultima riga sono presenti i permessi, l'utente e il gruppo a cui appartiene.
   </div>
 </div>
 
-<arrow v-click="1" x1="600" y1="120" x2="510" y2="50" color="rgba(59, 130, 246, 0.5)" width="2" arrowSize="1" />
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Il File System su Linux
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    I permessi associati alla root sono <strong>drwxr-xr-x</strong>, dove:
+    <ul>
+      <li>- la <strong>d</strong> sta per directory;</li>
+      <li>- il primo gruppo di tre caratteri <strong>rwx</strong> indica i permessi di cui gode il proprietario;</li>
+      <li>- il secondo gruppo, <strong>r-x</strong>, indica i permessi di cui gode il gruppo;</li>
+      <li>- l'ultimo gruppo, <strong>r-x</strong>, i permessi di cui gode qualunque altro utente.</li>
+    </ul>
+  </div>
+  <div class="pb-2">
+    I permessi <strong>r</strong>, <strong>w</strong> e <strong>x</strong>, indicano rispettivamente:<br/>
+    <ul>
+      <li><strong>r</strong> - diritto di lettura</li>
+      <li><strong>w</strong> - diritto di scrittura</li>
+      <li><strong>x</strong> - diritto di esecuzione</li>
+    </ul>
+  </div>
+  <div class="pb-2">
+    Il proprietario di <code>/</code> è l'utente con identificativo 0, quindi root, e il gruppo proprietario è il 
+    gruppo 0, ovvero il gruppo root.
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Il File System su Linux
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    La directory <code>/boot</code> contiene tutti i file relativi all'avvio del sistema.
+  </div>
+  <div class="pb-2">
+    La directory <code>/dev</code> contiene dei file di tipo particolare che rappresentano i <code>devices</code>
+    presenti e riconosciuti nella macchina;
+  </div>
+  <div class="pb-2">
+    La directory <code>/etc</code> contiene tutti i file di configuration del sistema;
+  </div>
+  <div class="pb-2">
+    La directory <code>/home</code> contiene tutte le "home directory" degli utenti;
+  </div>
+  <div class="pb-2">
+    Le directory <code>/lib</code> e <code>/lib64</code> contiene le librerie di sistema, rispettivamente a 32 ed a 64bit;
+  </div>
+  <div class="pb-2">
+    La directory <code>/mnt</code> è vuota e rimane a disposizione dell'utente per montarvi manualmente i devices
+    che collega alla macchina;
+  </div>
+  <div class="pb-2">
+    La directory <code>/opt</code> contiene tutte le applicazioni installate dall'utente che risultano essere
+    opzionali, non facenti parte del sistema e spesso non gestiti dal package manager utilizzato dal sistema;
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Il File System su Linux
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    La directory <code>/proc</code> è una directory particolare: ogni processo in esecuzione in Linux, occupa delle
+    risorse di sistema. Per gestire tali processi, il sistema utilizza una sorta di file system che non prende
+    spazio sulla memoria di massa ma è totalmente caricato in RAM. Questo file system prende posto all'interno
+    della directory <code>/proc</code>.<br/>Navigando all'interno della cartella, si scopriranno tante directory
+    quanti sono i processi in esecuzione sul sistema (alcuni nomi corrisponderanno ai nomi dei processi, altri al
+    pid assegnato per l'esecuzione);
+  </div>
+  <div class="pb-2">
+    La directory <code>/root</code> è la home directory dell'utente root;
+  </div>
+  <div class="pb-2">
+    La directory <code>/run</code> è utilizzata dalle applicazione per salvare tutto ciò che gli occorre per poter
+    operare, come le informazioni sui socket, i file di lock e altre informazioni utili solamente a runtime;
+  </div>
+  <div class="pb-2">
+    La directory <code>/sys</code> è un file system virtuale dove il kernel esporta le lproprie informazioni per 
+    renderle disponibili ad altri programmiò
+  </div>
+  <div class="pb-2">
+    La directory <code>/tmp</code> è dove tutti i programmi possono scrivere i file temporanei;
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Il File System su Linux
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    La directory <code>/usr</code> contiene file relativi alle applicazioni e al kernel
+    <ul>
+      <li>- in <code>/usr/bin</code> in genere sono presenti i file binari utilizzabili dai normali utenti;</li>
+      <li>- in <code>/usr/lib</code> sono presenti le librerie per il funzionamento dei programmi installati;</li>
+      <li>- in <code>/usr/include</code> sono presenti gli header delle librerie, utili per la compilazione
+      dei pramm;</li>
+      <li>- in <code>/usr/share</code>sono presenti i dati relativi alle varie applicazione, tra cui le pagine
+      dei manuali;</li>
+      <li>- in <code>/usr/sbin</code> in genere sono presenti i file binary utilizzabili solo da root;</li>
+      <li>- in <code>/usr/local</code> spesso troviamo una struttura del tutto simile a <code>/usr</code>, al cui
+      interno trovano posto le applicazioni compilate manualmente dall'utente finale.</li>
+    </ul>
+  </div>
+  <div class="pb-2">
+    Tutti gli eseguibili presenti in <code>/usr/bin</code>, <code>/usr/local/bin</code> o <code>/usr/sbin</code>,
+    sono eseguibili da terminale senza specificarne il percorso.<br/>
+    La directory <code>/usr</code>, e tutte le sue sottodirectory, sono accessibili da tutti, ma modificabili soltanto
+    dall'utente root.
+  </div>
+  <div class="pb-2">
+    La directory <code>/var</code> contiene i dati che i prgrammi cambiano durante la normale esecuzione del sistema
+  </div>
+</div>
