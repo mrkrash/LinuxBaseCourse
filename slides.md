@@ -593,3 +593,191 @@ equals: false
     La directory <code>/var</code> contiene i dati che i prgrammi cambiano durante la normale esecuzione del sistema
   </div>
 </div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Multiutenza e Permessi
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    Linux è un sistema operativo multiutente, dove differenti utenti possono avere accesso al sistema in modo
+    contemporaneo, avendo i propri dati, i propri programmi e impostazioni.<br/>
+    L'operazione di autenticazione dell'utente avviene tramite nome utente e password e il login può essere eseguito
+    in ambienti diversi, grafici o testuali, da locale o da remoto<br/>
+    L'utente principale del sistema è l'utente <strong>root</strong>, amministratore del sistema, con tutti i 
+    poteri che comporta questo ruolo. Ha poteri assoluti sul sistema:
+    <ul class="pl-5">
+      <li>- Aggiungere, eliminare e modificare account</li>
+      <li>- Installare e configurare servizi</li>
+      <li>- Accesso completo a tutti i file presenti nel file system</li>
+      <li>- Aggiungere o modificare file system</li>
+      <li>- Distruggere tutto con un solo comando (il potere di root sul sistema è assolluto)</li>
+    </ul>
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Multiutenza e Permessi
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    Buona parte delle distribuzioni moderne, hanno deciso di disattivare in modo predefinito l'account di 
+    amministrazione, incoraggiando l'utente ad utilizzare lo strumento <code>sudo</code> per svolgere i compiti di
+    amministrazione di sistema.
+  </div>
+  <div class="pb-2">
+    Lo strumento <code>sudo</code> permette a un utente (autorizzato) di elevare temporaneamente i propdi privilegi
+    usando la propria password. Per poterlo fare, l'utente deve appartenere al gruppo admin ed essere aggiunto al
+    file <code>/etc/sudoers</code>.
+  </div>
+  <div class="pb-2">
+    Se per qualche motivo si rende necessario abilitare l'account di root, basterà assegnargli semplicemente una
+    password con il comando <strong>sudo passwd</strong>
+  </div>
+  <div class="pb-2">
+    In modo predefinito, l'utente iniziale creato durante l'installazione di Ubuntu è un membro del gruppo <code>
+    admin</code> ed è stato aggiunto al file <code>/etc/sudoers</code> come utente autorizzato all'utilizzo di
+    sudo.
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Shell
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    Per shell si intende l'interfaccia testuale tramite la quale l'utente può operare sul sistema. Essa si occupa
+    di gestire la comunicazione fra utente e sistema operativo, interpretando ed eseguendo i comandi dell'utente.<br/>
+    Pùò avere diversi utilizzi:
+    <ul class="pl-5">
+      <li>- <strong>Uso interattivo</strong>, nel quale il sistema attende i comandi digitati dall'utente;</li>
+      <li>
+        - <strong>Configurazione della sessione</strong>, con cui vengono definiti variabili e parametri utilizzati
+        in ogni interazione dell'utente con la macchina;
+      </li>
+      <li>
+        - <strong>Programmazione</strong>, con la quale, utilizzando comandi di sistema e funzionalità della shell,
+        è possibile realizzare piccoli programmi (script shell), in grado di automatizzare operazioni e reagire ad
+        eventi.
+      </li>
+    </ul>
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Bash
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    Bash (acronimo per Bourne Again Shell) è una shell del progetto GNU usata nei sistemi operativi Unix e
+    specialmente in GNU/Linux.<br/>
+    Si tratta di un interprete di comandi che permette all'utente di comunicare con il sistema operativo
+    attraverso una serie di funzioni predefinite o di eseguire programmi.
+  </div>
+  <div class="pb-2">
+    Tecnicamente bash è un clone evoluto della shell standard di Unix (/bin/sh), chiamata anche Bourne Shell dal
+    nome del suo autore originario, Stephen Bourne.
+  </div>
+  <div class="pb-2">
+    Una delle funzionalità maggiormente apprezzate di bash è quella della redirezione dell'input e dell'output, grazie
+    al quale è possibile eseguire più programmi in cascata, passando come input dell'uno l'output dell'altro.
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Bash - Programmazione
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    <strong>Variabili</strong>
+  </div>
+  <div class="pb-2">
+    Le variabili in bash scripting non hanno bisogno di essere inizializzate, l'assegnazione avviene utilizzando la
+    sintassi <code>VAR=valore</code>.
+  </div>
+  <div class="pb-2">
+    È molto importante che il valore sia scritto subito dopo l'uguale senza alcuno spazio.<br/>
+    Il riferimento a tutte le variabili si fanno anteponendo il caratter <code>$</code> al nome della variabile:
+    <code>
+      VAR=world
+      echo hello $VAR!
+    </code>
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Bash - Programmazione
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    <strong>Variabili Speciali</strong>
+  </div>
+  <div class="pb-2">
+    <code>$N</code> dove posto N è un numero intero, corrisponde dell'argomento N-esimo passato da terminale al
+    programma ($0 è il nome del programma).
+  </div>
+  <div class="pb-2">
+    <code>$*</code> stringa che contiene tutti gli argomenti passati da terminale al programma.
+  </div>
+  <div class="pb-2">
+    <code>$#</code> stringa che contiene tutti il numero degli argomenti passati da terminale al programma.
+  </div>
+  <div class="pb-2">
+    <code>$@</code> stringa che contiene tutti gli argomenti passati allo script corrente (ogni paramentro viene
+    opportunamente quotato, questo permette l'utilizzo di questa vairabile nei cicli for).
+  </div>
+  <div class="pb-2">
+    <code>$?</code> stringa che contiene il valore di uscita dell'ultimo comando o funzione. Il comando ha
+    successo se tiroana a zero, qualsiasi altro valore indica invece un codice di errore.
+  </div>
+  <div class="pb-2">
+    <code>$$</code>, stringa che contiene il PID del processo in esecuzione.
+  </div>
+</div>
