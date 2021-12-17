@@ -16,16 +16,11 @@ layout: image-header-intro
 imageRight: '/static/linux.png'
 ---
 
-  <div class="leading-snug text-black dark:text-white text-opacity-60 dark:text-opacity-60 mt-4">
-    <span class="text-9xl text-opacity-60" style="font-weight:600;" >
-      LINUX
-    </span> 
-  </div>
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode 
-along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
+<div class="leading-snug text-black dark:text-white text-opacity-60 dark:text-opacity-60 mt-4">
+  <span class="text-9xl text-opacity-60" style="font-weight:600;" >
+    LINUX
+  </span> 
+</div>
 
 ---
 layout: image-header-intro
@@ -429,72 +424,6 @@ equals: false
 </div>
 
 <div class="text-left ml-20 mr-20 pb-2 opacity-60">
-  <div class="pb-3">
-    Tramite il comando <strong>stat /</strong>, otteniamo:
-  </div>
-  <div class="pb-3">
-    <code>
-      File: /<br/>
-      Dim.: 4096        Blocchi: 8          Blocco di IO: 4096   directory<br/>
-      Device: fc05h/64517d  Inode: 2           Coll.: 20<br/>
-      Accesso: (0755/drwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)<br/>
-    </code>
-  </div>
-  <div>
-    Le prime due righe indicano che la directory si chiama /, è grande 4096 bytes (come ogni directory) e
-    occupa 8 blocchi.<br/>
-    Nella terza troviamo il device in cui risiede e il numero di ulteriori directory che contiene.<br/>
-    Nell'ultima riga sono presenti i permessi, l'utente e il gruppo a cui appartiene.
-  </div>
-</div>
-
----
-layout: center-image
-equals: false
----
-
-<div class="text-primary dark:text-primary pb-4">
-  <span class="text-3xl" style="font-weight: 600;">
-    Il File System su Linux
-  </span>
-</div>
-
-<div class="text-left ml-20 mr-20 pb-2 opacity-60">
-  <div class="pb-2">
-    I permessi associati alla root sono <strong>drwxr-xr-x</strong>, dove:
-    <ul>
-      <li>- la <strong>d</strong> sta per directory;</li>
-      <li>- il primo gruppo di tre caratteri <strong>rwx</strong> indica i permessi di cui gode il proprietario;</li>
-      <li>- il secondo gruppo, <strong>r-x</strong>, indica i permessi di cui gode il gruppo;</li>
-      <li>- l'ultimo gruppo, <strong>r-x</strong>, i permessi di cui gode qualunque altro utente.</li>
-    </ul>
-  </div>
-  <div class="pb-2">
-    I permessi <strong>r</strong>, <strong>w</strong> e <strong>x</strong>, indicano rispettivamente:<br/>
-    <ul>
-      <li><strong>r</strong> - diritto di lettura</li>
-      <li><strong>w</strong> - diritto di scrittura</li>
-      <li><strong>x</strong> - diritto di esecuzione</li>
-    </ul>
-  </div>
-  <div class="pb-2">
-    Il proprietario di <code>/</code> è l'utente con identificativo 0, quindi root, e il gruppo proprietario è il 
-    gruppo 0, ovvero il gruppo root.
-  </div>
-</div>
-
----
-layout: center-image
-equals: false
----
-
-<div class="text-primary dark:text-primary pb-4">
-  <span class="text-3xl" style="font-weight: 600;">
-    Il File System su Linux
-  </span>
-</div>
-
-<div class="text-left ml-20 mr-20 pb-2 opacity-60">
   <div class="pb-2">
     La directory <code>/boot</code> contiene tutti i file relativi all'avvio del sistema.
   </div>
@@ -591,6 +520,249 @@ equals: false
   </div>
   <div class="pb-2">
     La directory <code>/var</code> contiene i dati che i prgrammi cambiano durante la normale esecuzione del sistema
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Il File System su Linux
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-3">
+    Tramite il comando <strong>stat /</strong>, otteniamo:
+  </div>
+  <div class="pb-3">
+    <code>
+      File: /<br/>
+      Dim.: 4096        Blocchi: 8          Blocco di IO: 4096   directory<br/>
+      Device: fc05h/64517d  Inode: 2           Coll.: 20<br/>
+      Accesso: (0755/drwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)<br/>
+    </code>
+  </div>
+  <div>
+    Le prime due righe indicano che la directory si chiama /, è grande 4096 bytes (come ogni directory) e
+    occupa 8 blocchi.<br/>
+    Nella terza troviamo il device in cui risiede e il numero di ulteriori directory che contiene.<br/>
+    Nell'ultima riga sono presenti i permessi, l'utente e il gruppo a cui appartiene.
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Il File System su Linux
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    I permessi associati alla root sono <strong>drwxr-xr-x</strong>, dove:
+    <ul>
+      <li>- la <strong>d</strong> sta per directory;</li>
+      <li>- il primo gruppo di tre caratteri <strong>rwx</strong> indica i permessi di cui gode il proprietario;</li>
+      <li>- il secondo gruppo, <strong>r-x</strong>, indica i permessi di cui gode il gruppo;</li>
+      <li>- l'ultimo gruppo, <strong>r-x</strong>, i permessi di cui gode qualunque altro utente.</li>
+    </ul>
+  </div>
+  <div class="pb-2">
+    I permessi <strong>r</strong>, <strong>w</strong> e <strong>x</strong>, indicano rispettivamente:<br/>
+    <ul>
+      <li><strong>r</strong> - diritto di lettura</li>
+      <li><strong>w</strong> - diritto di scrittura</li>
+      <li><strong>x</strong> - diritto di esecuzione</li>
+    </ul>
+  </div>
+  <div class="pb-2">
+    Il proprietario di <code>/</code> è l'utente con identificativo 0, quindi root, e il gruppo proprietario è il 
+    gruppo 0, ovvero il gruppo root.
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    File System - Links
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    Le informazioni riguardanti un oggetto (file o directory) di un filesystem, sono contenute in un inode, che viene
+    identificato da un numero progressivo e descrive le caratteristiche base di un oggetto: permessi, data di modifica,
+    tipo, posizione, ecc.
+  </div>
+  <div class="pb-2">
+    Il comando <code>ln <i>sorgente</i> <i>destinazione</i></code> crea un link (alias) di un file o di una directory
+  </div>
+  <div class="pb-2">
+    Quando si opera sul link è come se si operasse direttametne sul file, tranne quando si rimuove il link, ovvero non
+    si elimina il file.
+  </div>
+  <div class="pb-2">
+    I link possono essere di due tipi: <strong>hard</strong> e <strong>soft</strong>:
+    <ul class="ml-3">
+      <li>gli hard link sono di fatto un altro nome per un file esistente; originale e link sono indistinguibili, 
+      condividono lo stesso inode e non possono risiedere su due file system diversi o far riferimento a directory</li>
+      <li>i soft link, creabili con l'opzione <code>-s</code>, sono un tipo speciale di file che fanno riferimento a un
+      inode diverso, può essere fatto su file system diversi e su file che non esistono;</li>
+    </ul>
+  </div>
+  <div class="pb-2">
+    L'uso di link è completamente transparente e non impatta sulle performance del sistema.
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    File System - Gestione
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    Prima di poter utilizzare un filesystem (ad es. CDROM, USB, condivisione di rete windwosm directory nfs), questo deve 
+    essere formattato e montato in una sotto-directory della root ( / ).
+  </div>
+  <div class="pb-2">
+    Una volta montato, il file system risulta accessibile a programmi ed utenti in maniera totalmente trasparente,
+    diventando parte integrante dell'albero delle directory sotto /.
+  </div>
+  <div class="pb-2">
+    Dopo l'uso, il file system può essere smontato, operazione necessaria per le unità di memorizzazione removibili.
+  </div>
+  <div class="pb-2">
+    La directory in cui viene montato un file system può anche non essere vuota ma, il suo contenuto non potrà essere
+    visibile sino a quando non si smonta il file system
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    File System - Gestione - Comandi
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    <code>mount -t [tipo fs] [opzioni] <i>device</i> <i>destinazione</i></code> Monta un dispositivo a blocchi nella 
+    directory di destinazione
+  </div>
+  <div class="pb-2">
+    <code>umount [opzioni] <i>device</i></code> Smonta un dispositivo
+  </div>
+  <div class="pb-2">
+    <code>df [opzioni] <i>file</i></code> Verifica lo spazio libero su disco
+  </div>
+  <div class="pb-2">
+    <code>du [opzioni] <i>file</i></code> Verifica lo spazio occupato da file e directory
+  </div>
+  <div class="pb-2">
+    <code>fsck [opzioni] <i>device</i></code> Verifica l'integrità e ripara il file system
+  </div>
+  <div class="pb-2">
+    <code>mkfs [opzioni] <i>device</i></code> Crea un file system, ovvero lo formatta
+  </div>
+  <div class="pb-2">
+    Nel file <code>/ect/fstab</code> vengono configurate le informazioni sui vari file system preimpostati sul sistema,
+    impostandone i punti di mount, il tipo e altri utili parametri
+  </div>
+  <div class="pb-2">
+    <code>rmdir [opzioni] <i>directory</i></code> Elimina una directory
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    File System - Gestione - Comandi
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    <code>chown [opzioni] [utente] <i>file</i></code> Assegna un nuovo utente proprietario, sia spefificandone il nome
+    piuttosto che l'UID
+  </div>
+  <div class="pb-2">
+    <code>chgrp [opzioni] [gruppo] <i>file</i></code> Assegna un nuovo gruppo proprietario, similmente a quanto avviene
+    per il comando precedente
+  </div>
+  <div class="pb-2">
+    <code>chmod [opzioni] [modo] <i>file</i></code> Mdofica i permessi sul file, sia usando l'octal mode, dove si usano
+    tre numeri, riferiti rispettivamente a owner, group e others, sia utilizzando il symbolic mode, dove si usano le 
+    lettere r (read), w (write), x (execute) per assegnare i permessi a u (user), g (group) e o (others).<br/>
+    I seguenti comandi sono equivalenti:<br/>
+    <code><br/>
+      chmod 755 nomefile<br/>
+      chmod u=rwx,go=rx nomefile
+    </code>
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    File System - Copia/Modifica file e directory
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    <code>cp [opzioni] <i>sorgente</i> <i>destinazione</i></code> Copia di file o directory
+  </div>
+  <div class="pb-2">
+    <code>mv [opzioni] <i>sorgente</i> <i>destinazione</i></code> Spostamento di file o directory
+  </div>
+  <div class="pb-2">
+    <code>rm [opzioni] <i>file</i></code> Rimozione di file o directory
+  </div>
+  <div class="pb-2">
+    <code>ls [opzioni] <i>path</i></code> Elenca contenuto di una directory
+  </div>
+  <div class="pb-2">
+    <code>tree [opzioni] <i>path</i></code> Elenca contenuto di una directory con visualizzazione ad albero
+  </div>
+  <div class="pb-2">
+    <code>cd <i>path</i></code> Cambia directory corrente
+  </div>
+  <div class="pb-2">
+    <code>mkdir [opzioni] <i>directory</i></code> Crea una directory
+  </div>
+  <div class="pb-2">
+    <code>rmdir [opzioni] <i>directory</i></code> Elimina una directory
   </div>
 </div>
 
@@ -878,4 +1050,403 @@ imageRight: 'static/nano.png'
     un altro comando standard della shell che ci permmette di stampare a video il contenuto di qualunque file:
     <br/><code>cat ciao_linux.txt</code>
   </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Bash - Programmi Utili
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    <code>expr</code> l'interprete bash non è in grado di eseguire operazioni matematiche, quindi questo comando
+    ci viene in aiuto
+  </div>
+  <div class="pb-2">
+    <code>grep</code> utile per mostrare solo alcune righe ricevute in input sulla base del parametro che farà da
+    filtro
+  </div>
+  <div class="pb-2">
+    <code>cut</code> serve a spezzare una stringa in tante sotto-stringhe in base a un determinato separatore
+  </div>
+  <div class="pb-2">
+    <code>cat</code> serve per copiare, unire e manipolare il contenuto di uno o più file
+  </div>
+  <div class="pb-2">
+    <code>touch</code> utile per creare un file vuoto
+  </div>
+  <div class="pb-2">
+    <code>echo</code> replica in output ciò che riceve in input
+  </div>
+  <div class="pb-2">
+    <code>man</code> mostra il manuale dal comando passato come parametro
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Bash - Esempi di <code>expr</code>
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    <code><br/>
+      $ var1='10'<br/>
+      $ var2='20'
+    </code>
+  </div>
+  <div class="pb-2">
+    Mostra 0 se due numeri sono uguali con operatore '='<br/>
+    <code>
+      $ expr $var1 = $var2<br/>
+      0
+    </code>
+  </div>
+  <div class="pb-2">
+    Mostra 1 quando arg1 è minore di arg2<br/>
+    <code>
+      $ expr $var1 \&lt; $var2<br/>
+      1
+    </code>
+  </div>
+  <div class="pb-2">
+    Mostra 1 quando arg1 è diverso da arg2<br/>
+    <code>
+      $ expr $var1 \!= $var2<br/>
+      1
+    </code>
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Bash - Esempi di <code>grep</code>
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    Trova tutte le linee in cui viene trovato il pattern 'volpe'<br/>
+    <code>
+      $ grep "volpe" pinocchio.txt
+    </code>
+  </div>
+  <div class="pb-2">
+    Cerca ricorsivamente il pattern "gatto" in tutti i file di una determinata cartella e in tutte le sottocartelle<br/>
+    <code>
+      $ grep -r "gatto" /home/utente/libri/
+    </code>
+  </div>
+  <div class="pb-2">
+    Il pattern da ricercare può anche essere parziale.<br/>
+    <code>
+      $ grep -r "g..to" /home/utente/libri/
+    </code>
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Bash - Esempi di <code>cut</code>
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    Estrae il primo ed il quinto campo dal file /etc/passwd, che utilizza il carattere <code>:</code> come separatore di
+    campo<br/>
+    <code>
+      $ cut -f 1,5 -d : /etc/passwd
+    </code>
+  </div>
+  <div class="pb-2">
+    Estrae i primi dieci caratteri da ogni linea che giunge dallo standard input<br/>
+    <code>
+      $ cut -c -10 pinocchio.txt
+    </code>
+  </div>
+  <div class="pb-2">
+    Estrae i byte che vanno dal quinto al decimo, il sedicesimo e dal ventesimo in poi di ogni linea del file prova.txt
+    <br/>
+    <code>
+      $ cut -b 5-10,16,20- prova.txt
+    </code>
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Bash - Esempi di <code>cat</code>
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    Mostra il contenuto del file<br/>
+    <code>
+      $ cat /etc/passwd
+    </code>
+  </div>
+  <div class="pb-2">
+    Mostra il contenuto di più file<br/>
+    <code>
+      $ cat prova_1.txt prova_2.txt
+    </code>
+  </div>
+  <div class="pb-2">
+    Crea un file con il comando cat
+    <br/>
+    <code>
+      $ cat &gt; prova.txt<br/>
+      digito del testo<br/>
+      da inserite nel mio file<br/>
+      e lo salvo<br/>
+      CTRL+D
+    </code>
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Bash - Esempi di <code>cat</code>
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    Copia il contenuto di un file in un altro<br/>
+    <code>
+      $ cat prova_1.txt &gt; prova_2.txt
+    </code>
+  </div>
+  <div class="pb-2">
+    Accoda il contenuto di un file in un altro
+    <br/>
+    <code>
+      $ cat prova_1.txt &gt;&gt; prova_2.txt
+    </code>
+  </div>
+  <div class="pb-2">
+    Unisce il contenuto di più file in uno
+    <br/>
+    <code>
+      $ cat prova_1.txt prova_2.txt &gt; prova_3.txt
+    </code>
+  </div>
+  <div class="pb-2">
+    Ordina le righe dell'insieme dei file elencati copiandole nel file di uscita
+    <br/>
+    <code>
+      $ cat prova_1.txt prova_2.txt prova_3.txt | sort > prova_sorted.txt
+    </code>
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Bash - Pipes <code> | </code>
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    Dati due comandi A e B, il pipe viene utilizzato per redirigere l'output del comando all'input del comando B<br/>
+    Il pipe viene spesso utilizzato su più comandi in linea e il suo simbolo è <code>|</code>, che viene posto tra due
+    comandi
+  </div>
+  <div class="pb-2">
+    Mostra tutti i file contenuti nella directory corrente che contengono '.txt'
+    <br/>
+    <code>
+      $ ls -l | grep .txt
+    </code>
+  </div>
+  <div class="pb-2">
+    Msotra il numero di processi il cui owner è root<br/>
+    <code>
+      $ ps -ef | grep root | wc -l
+    </code>
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Bash - Manipolazione delle stringhe
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    In Bash una stringa non è altro che una variabile, si indica dunque con ${nome} oppure con la forma abbreviata 
+    $nome.<br/>
+    Il nome dentro le graffe può essere seguito da un modificatore che manipola la variabile, ad esempio:
+  </div>
+  <div class="pb-2">
+    <code>
+      VAR="stringa-di-esempio"
+      echo ${VAR#stringa-}
+    </code>
+    elimina "stringa-" dall'inizio della variabile
+  </div>
+  <div class="pb-2">
+    I modificatori sono molti, questi sono i tre fondamentali:
+    <ul class="ml-3">
+      <li><code>#</code> sottrae dall'inizio della stringa</li>
+      <li><code>%</code> sottrae dalla fine della stringa</li>
+      <li><code>/</code> sostituisce una sottostringa con un'altra</li>
+    </ul>
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Cron
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    Spesso capita di dover far eseguire al sistema dei comandi ad un dato momento del giorno, della settimana o 
+    dell'anno (ad es. i processi di backup automatici).<br/>
+    Per fare ciò, su linux, esiste <strong>Cron</strong>, sotto-sistema a cui viene delegata la schedulazione delle
+    operazione.<br/>
+    Per fare questo, andremo ad utilizzare <strong>crontab</strong>.
+  </div>
+  <div class="pb-2">
+    Crontab ci permette di schedulare delle operazioni sul nostro sistema con una certa semplicità, mettendo a
+    disposizione del demone cron di eseguire le operazioni ivi impostate.
+  </div>
+  <div class="pb-2">
+    Ogni utente del sistema può avere la propria versione di crontab.
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Il comando crontab
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    La sintassi del comando è <code>crontab -u username -opzione</code>, dove con <code>-u</code> specifichiamo il nome
+    utente che possiede il file crontab. Se l'opzione <code>-u</code> viene omessa, il sistema presumerà che si stia
+    operando sul proprio crontab personale.
+  </div>
+  <div class="pb-2">
+    Altre opzioni son:
+    <ul class="ml-3">
+      <li><code>-l</code> che ci permette di visualizzare il contenuto puntuale del crontab</li>
+      <li><code>-r</code> che rimuove tutte le operazioni eventualmente impostate</li>
+      <li><code>-e</code> che ci permette di editare le operazioni pianificate del nostro crontab tramite l'editor di
+      testo predefinito</li>
+    </ul>
+  </div>
+  <div class="pb-2">
+    Ogni riga del file crontab definisce un lavoro da eseguire e sarà simile al seguente:<br/>
+    <code>30 23 * * * tar -cvzf /backup_sicuro.tgz /home</code><br/>
+    dove i primi cinque parametri definiscono rispettivamente minuto, ora, giorno del mese, mese e giorno della 
+    settimana e il sesto il comando da eseguire.<br/>
+    L'asterisco significa "tutti".
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Il comando crontab
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    È possibile sostituire i primi cinque valori con delle stringhe "speciali" che assolvono al medesimo compito:
+  </div>
+  <ul class="ml-3">
+    <li><code>@reboot</code> lancia il comando all'avvio del sistema</li>
+    <li><code>@yearly</code> lancia il comando una volta all'anno</li>
+    <li><code>@monthly</code> lancia il comando una volta al mese</li>
+    <li><code>@weekly</code> lancia il comando una volta alla settimana</li>
+    <li><code>@daily</code> lancia il comando una volta al giorno</li>
+    <li><code>@hourly</code> lancia il comando una volta ogni ora</li>
+  </ul>
+</div>
+
+---
+layout: image-header-intro
+imageRight: '/static/linux.png'
+---
+<div class="text-primary dark:text-primary pb-3">
+  <span class="text-3xl" style="font-weight: 600;">
+    In definitiva
+  </span>
+</div>
+
+<div class="flex justify-between pb-2">
+  <span class="text-xs opacity-60">
+    Linux è un sistema operativo libero, malleabile e pienamente aperto.
+  </span>
+</div>
+
+<div class="flex justify-between pb-2">
+  <span class="text-xs opacity-60">
+    Le sue caratteristiche peculiari permettono di utilizzarlo per diversi scopi e in diversi contesti, senza mai
+    perdere d'occhio sicurezza e scalabilità.
+  </span>
 </div>
