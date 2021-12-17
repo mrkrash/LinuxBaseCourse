@@ -781,3 +781,101 @@ equals: false
     <code>$$</code>, stringa che contiene il PID del processo in esecuzione.
   </div>
 </div>
+
+---
+layout: image-header-intro
+imageRight: 'static/nano.png'
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Bash - Script
+  </span>
+</div>
+
+<div class="text-left text-sm mr-10 pb-2 opacity-60">
+  <div class="pb-2">
+    <strong>Creazione di un semplice file di script bash</strong>
+  </div>
+  <div class="pb-2">
+    Per iniziare sarà necessario creare un nuovo file vuoto, in cui andremo ad inserie le istruzioni che bash dovrà
+    eseguire.<br/>
+    Il comando per creare un file vuoto su linux è <code>touch <i>nomefile.sh</i></code>, dove <i>nomefile</i> è il
+    nome che vorremo assegnargli.<br/>
+  </div>
+  <div class="pb-2">
+    Creato il file, utilizziamo un editor di testo sufficientemente semplice: <strong>nano</strong>
+  </div>
+  <div class="pb-2">
+    Digitiamo quindi <code>nano nomefile.sh</code> e iniziamo a scrivere il seguente testo:<br/>
+    <code><br/>
+      #!/bin/bash<br/>
+      touch ciao_linux.txt<br/>
+      echo "Imparo linux!" > ciao_linux.txt<br/>
+    </code>
+  </div>
+  <div class="pb-2">
+    e quindi salviamo e chiudiamo il file con la sequenza di comandi CTRL+O e CTRL+X
+  </div>
+</div>
+
+---
+layout: image-header-intro
+imageRight: 'static/nano.png'
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Bash - Script
+  </span>
+</div>
+
+<div class="text-left text-sm mr-10 pb-2 opacity-60">
+  <div class="pb-2">
+    <strong>Creazione di un semplice file di script bash</strong>
+  </div>
+  <div class="pb-2">
+    Nella prima riga indichiamo al sistema qual'è il programma con il quale vogliamo interpretare il contenuto
+    dei comandi.<br/>In questo caso si tratta appunto di bash.
+  </div>
+  <div class="pb-2">
+    Nella seconda diamo il comando per creare un file vuoto con il nome <code>ciao_linux.txt</code>
+  </div>
+  <div class="pb-2">
+    Nella terza diamo il comando <code>echo</code>, la cui funzione è quella di ridare in output la stringa che
+    riceve in input. L'output di echo lo reindirizziamo verso il file appena creato.
+  </div>
+</div>
+
+---
+layout: image-header-intro
+imageRight: 'static/nano.png'
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Bash - Script
+  </span>
+</div>
+
+<div class="text-left text-sm mr-10 pb-2 opacity-60">
+  <div class="pb-2">
+    <strong>Creazione di un semplice file di script bash</strong>
+  </div>
+  <div class="pb-2">
+    Creato il file, non ci resta che assegnargli i diritti corretti ed eseguirlo.
+  </div>
+  <div class="pb-2">
+    Per prima cosa impostiamo i diritti di esecuzione:<br/><code>chmod u+x nomefile.sh</code>
+  </div>
+  <div class="pb-2">
+    E quindi lanciamo lo script digitando:<br/><code>./nomefile.sh</code>
+  </div>
+  <div class="pb-2">
+    Eseguito il comando, sembrerà non accadere nulla. In realtà bash ha creato per noi un file ciao_linux.txt
+    con all'interno il testo che abbiamo dato in input ad echo.<br/>
+    Ci basterà aprirlo con l'editor di testo che più ci aggrada (anche nano va benissimo), oppure utilizzare
+    un altro comando standard della shell che ci permmette di stampare a video il contenuto di qualunque file:
+    <br/><code>cat ciao_linux.txt</code>
+  </div>
+</div>
