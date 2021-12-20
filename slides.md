@@ -13,7 +13,7 @@ drawings:
   persist: false
 titleTemplate: 'Corso Base Linux'
 layout: image-header-intro
-imageRight: '/static/linux.png'
+imageRight: '/linux.png'
 ---
 
 <div class="leading-snug text-black dark:text-white text-opacity-60 dark:text-opacity-60 mt-4">
@@ -24,7 +24,7 @@ imageRight: '/static/linux.png'
 
 ---
 layout: image-header-intro
-imageRight: '/static/linux.png'
+imageRight: '/linux.png'
 ---
   <div class="text-primary dark:text-primary ">
     <span class="text-3xl" style="font-weight: 600;">
@@ -62,7 +62,7 @@ imageRight: '/static/linux.png'
 
 ---
 layout: dynamic-image
-image: 'static/Linus_Torvalds.jpg'
+image: '/Linus_Torvalds.jpg'
 equals: false
 ---
 
@@ -107,7 +107,7 @@ equals: false
 
 ---
 layout: image-header-intro
-imageRight: '/static/gnu.png'
+imageRight: '/gnu.png'
 ---
   <div class="text-primary dark:text-primary ">
     <span class="text-3xl" style="font-weight: 600;">
@@ -252,7 +252,7 @@ equals: false
 
 ---
 layout: image-header-intro
-imageRight: 'static/Installazione01.png'
+imageRight: '/Installazione01.png'
 ---
 
 <div class="text-primary dark:text-primary pb-4">
@@ -287,20 +287,20 @@ layout: center-image
 
 <div class="flex text-xs">
   <div class="mr-2" style="width: 14rem;">
-    <img src="static/Installazione02.png" />
+    <img src="/Installazione02.png" />
     <div class="opacity-60 mt-4">
       Decidiamo se procedere con un'installazione minimale o completa e, soprattutto, se scaricare gli aggiornamenti
       durante l'installazione ed installare driver e software di terze parti.
     </div>
   </div>
   <div class="mr-2" style="width: 14rem;">
-    <img src="static/Installazione03.png" />
+    <img src="/Installazione03.png" />
     <div class="opacity-60 mt-4">
       Decidiamo se cancellare il contenuto del disco o ricavare un po di spazio da quello libero.
     </div>
   </div>
   <div class="mr-2" style="width: 14rem;">
-    <img src="static/Installazione04.png" />
+    <img src="/Installazione04.png" />
     <div class="opacity-60 mt-4">
       Inseriamo il nome utente che desideriamo utilizzare, il nome con cui il computer sarà riconosciuto all'interno 
       della rete e la password
@@ -310,7 +310,7 @@ layout: center-image
 
 ---
 layout: image-header-intro
-imageRight: 'static/Desktop.jpg'
+imageRight: '/Desktop.jpg'
 ---
 
 <div class="text-primary dark:text-primary pb-4">
@@ -949,7 +949,7 @@ equals: false
 
 ---
 layout: image-header-intro
-imageRight: 'static/nano.png'
+imageRight: '/nano.png'
 ---
 
 <div class="text-primary dark:text-primary pb-4">
@@ -986,7 +986,7 @@ imageRight: 'static/nano.png'
 
 ---
 layout: image-header-intro
-imageRight: 'static/nano.png'
+imageRight: '/nano.png'
 ---
 
 <div class="text-primary dark:text-primary pb-4">
@@ -1014,7 +1014,7 @@ imageRight: 'static/nano.png'
 
 ---
 layout: image-header-intro
-imageRight: 'static/nano.png'
+imageRight: '/nano.png'
 ---
 
 <div class="text-primary dark:text-primary pb-4">
@@ -1643,7 +1643,7 @@ equals: false
 
 ---
 layout: image-header-intro
-imageRight: '/static/linux.png'
+imageRight: '/linux.png'
 ---
 <div class="text-primary dark:text-primary pb-3">
   <span class="text-3xl" style="font-weight: 600;">
