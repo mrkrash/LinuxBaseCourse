@@ -105,11 +105,6 @@ equals: false
   </span>
 </div>
 
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
-
 ---
 layout: image-header-intro
 imageRight: '/static/gnu.png'
@@ -122,12 +117,12 @@ imageRight: '/static/gnu.png'
 
   <div class="flex justify-between pb-2 pt-5">
     <span class="text-xs opacity-60">
-      Linus Torvalds racconta nel suo libro che linux nasce per poter dare un'alternativa libera al predominio dei 
+      Linus Torvalds racconta nel suo libro, che linux nasce per poter dare un'alternativa libera al predominio dei 
       software propretari. Adotta quindi una licenza il cui scopo principale è mantenere tale libertà. 
     </span>
   </div>
 
-  <div class="flex justify-between pb-2 pt-5">
+  <div class="flex justify-between pb-2">
     <span class="text-xs opacity-60">
       La <strong>GPL</strong> sancisce che qualiasi fornitore, al momento di distribuire file binari, deve anche rendere
       il codice sorgente leggibile e disponibile sotto gli stessi termini di licenza.<br/>
@@ -136,9 +131,9 @@ imageRight: '/static/gnu.png'
     </span>
   </div>
 
-  <div class="flex justify-between pb-2 pt-5">
+  <div class="flex justify-between pb-2">
     <span class="text-xs opacity-60">
-      Oggi arrivata alla terza versione, è progettata per essere applicata facilmente ai programmi di cui detengono i
+      Oggi arrivata alla terza versione, è progettata per essere applicata facilmente ai programmi di cui si detengono i
       relativi diritti.
     </span>
   </div>
@@ -164,13 +159,13 @@ equals: false
   <div class="pb-2">
       Il Sistema Operativo è composto da un certo numero di sottosistemi:
     <ul class="ml-3 pt-2">
-      <li>- il <strong>Bootloader</strong> che è il software che gestisce il processo di avvio del computer;</li>
+      <li>- il <strong>Bootloader</strong>, che è il software che gestisce il processo di avvio del computer;</li>
       <li>
-        - il <strong>Kernel</strong> che è il cuore del sistema e si occupa di gestire le risorse presenti nel
+        - il <strong>Kernel</strong>, che è il cuore del sistema e si occupa di gestire le risorse presenti nel
         computer, rendendole disponibili alle applicazioni;
       </li>
       <li>
-        - i <strong>Demoni</strong> che sono i vari servizi che ascoltano in backgroud e si attivano all'avvio del
+        - i <strong>Demoni</strong>, che sono i vari servizi che ascoltano in backgroud e si attivano all'avvio del
         computer o in seguito a specifici eventi;
       </li>
       <li>
@@ -178,7 +173,7 @@ equals: false
         controllare il computer;
       </li>
       <li>
-        - il <strong>Server Grafico</strong> a cui è delegata la responsabilità di visualizzare le informazioni sul 
+        - il <strong>Server Grafico</strong>, a cui è delegata la responsabilità di visualizzare le informazioni sul 
         monitor;
       </li>
       <li>
@@ -217,9 +212,9 @@ equals: false
     </ul>
   </div>
   <div>
-    Le distribuzioni aggiungono tutto il software necessario per avere un sistema operativo completo di software
-    applicativi e di servizio, personalizzando le versioni degli stessi e organizzando al meglio la procedura di
-    installazione.
+    possiamo sicuramente affermare che le distribuzioni aggiungono tutto il software necessario per avere un sistema 
+    operativo completo di software applicativi e di servizio, personalizzando le versioni degli stessi e organizzando al
+    meglio la procedura di installazione.
   </div>
 </div>
 
@@ -237,7 +232,7 @@ equals: false
 <div class="text-left ml-20 mr-20 pb-2 opacity-60">
   <div class="pb-4">
       Le distribuzioni oggi disponibili sono diverse decine, tutte valide a modo loro e che si differenziano tra esse
-      per delle pecularietà come l'ambiente di lavoro a cui sono destinate
+      per delle pecularietà come l'ambiente di lavoro a cui sono destinate.
   </div>
 
   <div class="pb-2">
@@ -351,12 +346,12 @@ equals: false
     scrittura, ricerca, lettura, memorizzazione, modifica ed eliminazione dei file. La strutturazione dei file deve 
     garantire una loro identificazione rapida senza errori e un accesso il più veloce possibile da parte degli utenti. 
     Inoltre, il file system definisce, ad esempio, le seguenti proprietà:
-    <ul>
-      <li>convenzioni sui nomi di file</li>
-      <li>attributi dei file</li>
-      <li>controllo/i di accesso</li>
+    <ul class="ml-3">
+      <li>- convenzioni sui nomi di file</li>
+      <li>- attributi dei file</li>
+      <li>- controllo/i di accesso</li>
     </ul>
-    Inoltre il file system sono un’importante componente operativa che funge da interfaccia tra il sistema operativo e 
+    Inoltre il file system è un’importante componente operativa che funge da interfaccia tra il sistema operativo e 
     tutte le unità collegate interne ed esterne, ad esempio tramite una porta USB.
   </div>
 
@@ -432,17 +427,18 @@ equals: false
     presenti e riconosciuti nella macchina;
   </div>
   <div class="pb-2">
-    La directory <code>/etc</code> contiene tutti i file di configuration del sistema;
+    La directory <code>/etc</code> contiene tutti i file di configurazione del sistema;
   </div>
   <div class="pb-2">
     La directory <code>/home</code> contiene tutte le "home directory" degli utenti;
   </div>
   <div class="pb-2">
-    Le directory <code>/lib</code> e <code>/lib64</code> contiene le librerie di sistema, rispettivamente a 32 ed a 64bit;
+    Le directory <code>/lib</code> e <code>/lib64</code> contengono le librerie di sistema, rispettivamente a 32 ed a 
+    64bit;
   </div>
   <div class="pb-2">
     La directory <code>/mnt</code> è vuota e rimane a disposizione dell'utente per montarvi manualmente i devices
-    che collega alla macchina;
+    che vengono collegati alla macchina;
   </div>
   <div class="pb-2">
     La directory <code>/opt</code> contiene tutte le applicazioni installate dall'utente che risultano essere
@@ -478,8 +474,8 @@ equals: false
     operare, come le informazioni sui socket, i file di lock e altre informazioni utili solamente a runtime;
   </div>
   <div class="pb-2">
-    La directory <code>/sys</code> è un file system virtuale dove il kernel esporta le lproprie informazioni per 
-    renderle disponibili ad altri programmiò
+    La directory <code>/sys</code> è un file system virtuale dove il kernel esporta le proprie informazioni per 
+    renderle disponibili ad altri programmi;
   </div>
   <div class="pb-2">
     La directory <code>/tmp</code> è dove tutti i programmi possono scrivere i file temporanei;
@@ -504,10 +500,10 @@ equals: false
       <li>- in <code>/usr/bin</code> in genere sono presenti i file binari utilizzabili dai normali utenti;</li>
       <li>- in <code>/usr/lib</code> sono presenti le librerie per il funzionamento dei programmi installati;</li>
       <li>- in <code>/usr/include</code> sono presenti gli header delle librerie, utili per la compilazione
-      dei pramm;</li>
+      dei programmi;</li>
       <li>- in <code>/usr/share</code>sono presenti i dati relativi alle varie applicazione, tra cui le pagine
       dei manuali;</li>
-      <li>- in <code>/usr/sbin</code> in genere sono presenti i file binary utilizzabili solo da root;</li>
+      <li>- in <code>/usr/sbin</code> in genere sono presenti i file binari utilizzabili solo da root;</li>
       <li>- in <code>/usr/local</code> spesso troviamo una struttura del tutto simile a <code>/usr</code>, al cui
       interno trovano posto le applicazioni compilate manualmente dall'utente finale.</li>
     </ul>
@@ -519,7 +515,7 @@ equals: false
     dall'utente root.
   </div>
   <div class="pb-2">
-    La directory <code>/var</code> contiene i dati che i prgrammi cambiano durante la normale esecuzione del sistema
+    La directory <code>/var</code> contiene i dati che i programmi cambiano durante la normale esecuzione del sistema.
   </div>
 </div>
 
@@ -616,10 +612,10 @@ equals: false
   <div class="pb-2">
     I link possono essere di due tipi: <strong>hard</strong> e <strong>soft</strong>:
     <ul class="ml-3">
-      <li>gli hard link sono di fatto un altro nome per un file esistente; originale e link sono indistinguibili, 
-      condividono lo stesso inode e non possono risiedere su due file system diversi o far riferimento a directory</li>
-      <li>i soft link, creabili con l'opzione <code>-s</code>, sono un tipo speciale di file che fanno riferimento a un
-      inode diverso, può essere fatto su file system diversi e su file che non esistono;</li>
+      <li>- gli hard link sono di fatto un altro nome per un file esistente; originale e link sono indistinguibili, 
+      condividono lo stesso inode e non possono risiedere su due file system diversi o far riferimento a directory;</li>
+      <li>- i soft link, creabili con l'opzione <code>-s</code>, sono un tipo speciale di file che fanno riferimento a
+      un inode diverso, può essere fatto su file system diversi e su file che non esistono;</li>
     </ul>
   </div>
   <div class="pb-2">
@@ -640,8 +636,8 @@ equals: false
 
 <div class="text-left ml-20 mr-20 pb-2 opacity-60">
   <div class="pb-2">
-    Prima di poter utilizzare un filesystem (ad es. CDROM, USB, condivisione di rete windwosm directory nfs), questo deve 
-    essere formattato e montato in una sotto-directory della root ( / ).
+    Prima di poter utilizzare un filesystem (ad es. CDROM, USB, condivisione di rete windows, directory nfs), questo 
+    deve essere formattato e montato in una sotto-directory della root ( / ).
   </div>
   <div class="pb-2">
     Una volta montato, il file system risulta accessibile a programmi ed utenti in maniera totalmente trasparente,
@@ -691,9 +687,6 @@ equals: false
     Nel file <code>/ect/fstab</code> vengono configurate le informazioni sui vari file system preimpostati sul sistema,
     impostandone i punti di mount, il tipo e altri utili parametri
   </div>
-  <div class="pb-2">
-    <code>rmdir [opzioni] <i>directory</i></code> Elimina una directory
-  </div>
 </div>
 
 ---
@@ -717,7 +710,7 @@ equals: false
     per il comando precedente
   </div>
   <div class="pb-2">
-    <code>chmod [opzioni] [modo] <i>file</i></code> Mdofica i permessi sul file, sia usando l'octal mode, dove si usano
+    <code>chmod [opzioni] [modo] <i>file</i></code> Modifica i permessi sul file, sia usando l'octal mode, dove si usano
     tre numeri, riferiti rispettivamente a owner, group e others, sia utilizzando il symbolic mode, dove si usano le 
     lettere r (read), w (write), x (execute) per assegnare i permessi a u (user), g (group) e o (others).<br/>
     I seguenti comandi sono equivalenti:<br/>
@@ -947,7 +940,7 @@ equals: false
   </div>
   <div class="pb-2">
     <code>$?</code> stringa che contiene il valore di uscita dell'ultimo comando o funzione. Il comando ha
-    successo se tiroana a zero, qualsiasi altro valore indica invece un codice di errore.
+    successo se ritorna zero, qualsiasi altro valore indica invece un codice di errore.
   </div>
   <div class="pb-2">
     <code>$$</code>, stringa che contiene il PID del processo in esecuzione.
@@ -970,7 +963,7 @@ imageRight: 'static/nano.png'
     <strong>Creazione di un semplice file di script bash</strong>
   </div>
   <div class="pb-2">
-    Per iniziare sarà necessario creare un nuovo file vuoto, in cui andremo ad inserie le istruzioni che bash dovrà
+    Per iniziare sarà necessario creare un nuovo file vuoto, in cui andremo ad inserire le istruzioni che bash dovrà
     eseguire.<br/>
     Il comando per creare un file vuoto su linux è <code>touch <i>nomefile.sh</i></code>, dove <i>nomefile</i> è il
     nome che vorremo assegnargli.<br/>
@@ -978,7 +971,7 @@ imageRight: 'static/nano.png'
   <div class="pb-2">
     Creato il file, utilizziamo un editor di testo sufficientemente semplice: <strong>nano</strong>
   </div>
-  <div class="pb-2">
+  <div class="">
     Digitiamo quindi <code>nano nomefile.sh</code> e iniziamo a scrivere il seguente testo:<br/>
     <code><br/>
       #!/bin/bash<br/>
@@ -1044,7 +1037,7 @@ imageRight: 'static/nano.png'
     E quindi lanciamo lo script digitando:<br/><code>./nomefile.sh</code>
   </div>
   <div class="pb-2">
-    Eseguito il comando, sembrerà non accadere nulla. In realtà bash ha creato per noi un file ciao_linux.txt
+    Eseguito il comando, sembrerà non accadere nulla. In realtà bash ha creato per noi un file denominato ciao_linux.txt
     con all'interno il testo che abbiamo dato in input ad echo.<br/>
     Ci basterà aprirlo con l'editor di testo che più ci aggrada (anche nano va benissimo), oppure utilizzare
     un altro comando standard della shell che ci permmette di stampare a video il contenuto di qualunque file:
@@ -1085,7 +1078,7 @@ equals: false
     <code>echo</code> replica in output ciò che riceve in input
   </div>
   <div class="pb-2">
-    <code>man</code> mostra il manuale dal comando passato come parametro
+    <code>man</code> mostra il manuale del comando passato come parametro
   </div>
 </div>
 
@@ -1124,7 +1117,7 @@ equals: false
   <div class="pb-2">
     Mostra 1 quando arg1 è diverso da arg2<br/>
     <code>
-      $ expr $var1 \!= $var2<br/>
+      $ expr $var1 \ⵑ= $var2<br/>
       1
     </code>
   </div>
@@ -1175,10 +1168,10 @@ equals: false
 
 <div class="text-left ml-20 mr-20 pb-2 opacity-60">
   <div class="pb-2">
-    Estrae il primo ed il quinto campo dal file /etc/passwd, che utilizza il carattere <code>:</code> come separatore di
+    Estrae il primo ed il sesto campo dal file /etc/passwd, che utilizza il carattere <code>:</code> come separatore di
     campo<br/>
     <code>
-      $ cut -f 1,5 -d : /etc/passwd
+      $ cut -f 1,6 -d : /etc/passwd
     </code>
   </div>
   <div class="pb-2">
@@ -1361,7 +1354,7 @@ equals: false
   </div>
   <div class="pb-2">
     Crontab ci permette di schedulare delle operazioni sul nostro sistema con una certa semplicità, mettendo a
-    disposizione del demone cron di eseguire le operazioni ivi impostate.
+    disposizione del demone cron le informazione per eseguire le operazioni impostate.
   </div>
   <div class="pb-2">
     Ogni utente del sistema può avere la propria versione di crontab.
@@ -1386,7 +1379,7 @@ equals: false
     operando sul proprio crontab personale.
   </div>
   <div class="pb-2">
-    Altre opzioni son:
+    Altre opzioni sono:
     <ul class="ml-3">
       <li><code>-l</code> che ci permette di visualizzare il contenuto puntuale del crontab</li>
       <li><code>-r</code> che rimuove tutte le operazioni eventualmente impostate</li>
@@ -1429,24 +1422,259 @@ equals: false
 </div>
 
 ---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Networking
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    Sin dalle prime versioni, per ovvi motivi, una delle funzionalità principali di linux, è quella di poter comunicare
+    con l'esterno.
+  </div>
+  <div class="pb-2">
+    Per poterlo fare, il kernel di linux supporta svariati protocolli di comunicazione, dai più obsoleti ai più
+    innovativi.<br/>
+    Sicuramente il più utilizzato è il protocollo TCP/IP.
+  </div>
+  <div class="pb-2">
+    Per protocollo TCP/IP ci si riferisce a un importante protocollo internet che è responsabile della trasmissione o
+    del trasferimento di pacchetti di dati in rete e su internet.<br/>
+    Tramite esso, due computer riescono a scambiarsi informazioni sia se sono collegati alla stessa rete locale
+    (Ethernet o WiFi), sia che si trovano ai due capi di una connessione Internet (broadband).
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Networking
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    Ad ogni computer collegato a una rete tramite il protocollo TCP/IP, viene assegnato un 
+    <strong>indirizzo IP</strong>.<br/>
+    Questo indirizzo, nella sua versione 4, la più diffusa, ha un formato composto da quattro numeri, che vanno da 0 a
+    255:
+    <code>192.168.1.55</code>
+  </div>
+  <div class="pb-2">
+    Per verificare quale indirizzo è stato assegnato alla nostra macchina con linux, abbiamo a disposizione il comando
+    <code>ip</code>
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Networking
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    Digitando da terminale il comando <code>ip a</code> avremo un risulto simile al seguente
+    <code><br/>
+      1: lo: ❬LOOPBACK,UP,LOWER_UP❭ mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000<br/>
+          link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00<br/>
+          inet 127.0.0.1/8 scope host lo<br/>
+          valid_lft forever preferred_lft forever<br/>
+          inet6 ::1/128 scope host <br/>
+          valid_lft forever preferred_lft forever<br/>
+      2: enp1s0: ❬BROADCAST,MULTICAST,UP,LOWER_UP❭ mtu 1500 qdisc fq_codel state UP group default qlen 1000<br/>
+          link/ether 52:54:00:7c:00:3a brd ff:ff:ff:ff:ff:ff<br/>
+          inet 192.168.1.103/24 brd 192.168.1.255 scope global dynamic noprefixroute enp1s0<br/>
+          valid_lft 3445sec preferred_lft 3445sec<br/>
+          inet6 fe80::813a:204:8b17:1a56/64 scope link noprefixroute <br/>
+          valid_lft forever preferred_lft forever<br/>
+     </code>
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Networking
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    Tra le varie informazioni riportate dal comando ip, vi sono:
+    <ul class="ml-3">
+      <li>- il nome dell'interfaccia di rete, in questo caso <strong>lo</strong> e <strong>enp1s0</strong>;</li>
+      <li>
+        - lo stato dell'interfaccia, in questo caso <strong>UNKNOWN</strong> per lo e <strong>UP</strong> per enp1s0;
+      </li>
+      <li>
+        - l'indirizzo di rete assegnato, <strong>127.0.0.1/8</strong> per lo e <strong>192.168.1.103/24</strong> per
+        enp1s0;
+      </li>
+    </ul>
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Networking - lo
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    L'interfaccia di <strong>loopback</strong> o <strong>lo</strong>, è un interfaccia virtuale e fittizia, necessaria
+    al nomrale funzionamento dell'ambiente linux.<br/>Tramite questa interfaccia, i vari servizi che fanno uso del 
+    protocollo TCP/IP, possono dialogare tra loro e scambiarsi informazioni in tutta sicurezza.<br/>
+    L'indirizzo assegnato a questa interfaccia è standard e prefissato: <strong>127.0.0.1/8</strong><br/>
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Networking - enp1s0, eth0, altro
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    Ogni altra interfaccia, su linux, può avere o un nome generico (come ad es. eth0, eth1, ect.) oramai in disuso, o un
+    nome specifico relativo all'hardware utilizzato (come ad esempio enp1s0).<br/>
+    Tramite questa o altre interfacce, il computer può comunicare correttamente con l'esterno, usufruire dei servizi
+    messi a disposizione dagli altri sistemi, e metterne a sua volta a disposizione.<br/>
+    Non esiste un indirizzo prefissato da assegnargli, esso dipende dalla rete a cui si è collegati e quindi dalle
+    politiche messe in atto dall'amministratore di rete o, più semplicemente, dal router tramite il quale guadagniamo la
+    connessione alla rete.<br/>
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Networking - file di configurazione
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    <strong>/etc/sysconfig/network</strong><br/>
+    Contiene le principali configurazioni come il nome della macchina (hostname) e il default gateway. Ad esempio:
+    <code><br/>
+      NETWORKING=yes ;Attiva la rete<br/>
+      HOSTNAME=ubuntu-pc ;Il nome della macchina<br/>
+      GATEWAY=192.168.1.1 ;L'indirizzo IP del router che ci permette la connessione a internet<br/>
+    </code>
+  </div>
+  <div class="pb-2">
+    <strong>/etc/sysconfig/network-script/*</strong><br/>
+    Directory contenente i file di configuraazione delle singole interfacce
+  </div>
+  <div class="pb-2">
+    <strong>/etc/hosts</strong><br/>
+    Contiene il mapping tra indirizzi e hostname (ed alias). Ad esempio:
+    <code><br/>
+      127.0.0.1 localhost.localdomain localhost<br/>
+      192.168.1.55 ubuntu-pc<br/>
+    </code>
+  </div>
+</div>
+
+---
+layout: center-image
+equals: false
+---
+
+<div class="text-primary dark:text-primary pb-4">
+  <span class="text-3xl" style="font-weight: 600;">
+    Networking - file di configurazione
+  </span>
+</div>
+
+<div class="text-left ml-20 mr-20 pb-2 opacity-60">
+  <div class="pb-2">
+    <strong>/etc/services</strong><br/>
+    Contiene il mapping tra il numero delle porte e i nomi dei servizi.<br/>
+    È un file che solitamente non si modifica, a meno di creare nuovi servizi personalizzati.
+  </div>
+  <div class="pb-2">
+    <strong>/etc/resolv.conf</strong><br/>
+    File di configurazione del client DNS, ovvero contiene gli indirizzi del server DNS e un possibile dominio
+    dell'host e l'ordine di ricerca. Ad esempio:
+    <code><br/>
+      nameserver 192.168.1.1 ;IP del DNS primario, che spesso coincide con l'indirizzo del default gateway;<br/>
+      nameserver 8.8.8.8 ;IP del DNS secondario<br/>
+      domain miodominio.it ;Nome del dominio dove si trova l'host<br/>
+      options timeout:6 ;Imposta il timeout a 6 secondi per le query DNS
+    </code>
+  </div>
+</div>
+
+---
 layout: image-header-intro
 imageRight: '/static/linux.png'
 ---
 <div class="text-primary dark:text-primary pb-3">
   <span class="text-3xl" style="font-weight: 600;">
-    In definitiva
+    In definitiva, perchè usare linux
   </span>
 </div>
 
 <div class="flex justify-between pb-2">
   <span class="text-xs opacity-60">
-    Linux è un sistema operativo libero, malleabile e pienamente aperto.
+    Linux è un sistema operativo libero, non ha costi di licenza e c'è una vera e propria comunità di sviluppatori che
+    giornalmente si adopera per migliorarlo, aggiornarlo e diffonderlo.
   </span>
 </div>
 
 <div class="flex justify-between pb-2">
   <span class="text-xs opacity-60">
-    Le sue caratteristiche peculiari permettono di utilizzarlo per diversi scopi e in diversi contesti, senza mai
-    perdere d'occhio sicurezza e scalabilità.
+    È semplice da utilizzare, la sua interfaccia grafica è molto simile a qualunque altro sistema operativo: cartelle,
+    copia e incolla, browser sono uguali ai programmi presenti negli altri sistemi operativi
+  </span>
+</div>
+
+<div class="flex justify-between pb-2">
+  <span class="text-xs opacity-60">
+    La semplicità però non ci impedisce di addentrarci nella complessità dei sistemi server, nell'esplorare funzionalità
+    che tutti i giorni siamo abituati ad utilizzare come semplici utenti.
+  </span>
+</div>
+
+<div class="flex justify-between pb-2">
+  <span class="text-xs opacity-60">
+    Inoltre linux, ad oggi, è esente da virus informatici: è di fatto l'unico sistema operativo struttura in modo
+    "sicuro" e che ci permette un'immunità dai virus molto vicina al 100%.
   </span>
 </div>
